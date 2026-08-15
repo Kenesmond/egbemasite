@@ -1,0 +1,373 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #fafbfc;
+  color: #1e293b;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 1280px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* ----- navbar refinements (mobile first) ----- */
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.navbar .nav-link:hover {
+  background: rgba(13, 110, 253, 0.06);
+  color: #0d6efd;
+}
+
+.navbar .nav-link.active {
+  color: #0d6efd !important;
+  background: rgba(13, 110, 253, 0.08);
+}
+
+
+
+/* ----- community intro section ----- */
+.com {
+  background: green;
+  padding: 1.5rem 1.25rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  margin-bottom: 2rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.com:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.com h2 {
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  font-size: calc(1.6rem + 0.8vw);
+  margin-bottom: 0.5rem;
+  border-left: 6px solid #0d6efd;
+  padding-left: 1rem;
+}
+
+.com p {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+
+/* ----- community cards grid (row) ----- */
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.row > div {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.row > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+.row > div > div {
+  padding: 1.25rem 1.25rem 1.5rem 1.25rem;
+}
+
+/* community card header */
+.row h4 {
+  font-weight: 700;
+  color: #0b2a44;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #0d6efd;
+  display: inline-block;
+}
+.row h6{
+  color: gold;
+}
+  .row h5{
+  color: red;
+}
+
+.row h4 + p {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+/* community card content */
+.row p {
+  font-size: 0.92rem;
+  color: none;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  background-color: white;
+}
+
+.row p strong {
+  color: #0b2a44;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 85px;
+}
+
+.row p br {
+  display: none;
+  
+}
+
+/* style for multi-line paragraphs with inline strong tags */
+.row p:has(strong) {
+  padding: 0.25rem 0;
+}
+
+/* specific styling for the detailed community info */
+.row > div > div > p {
+  border-top: 1px solid #f0f2f5;
+  padding-top: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* style for the introductory paragraph within card */
+.row > div > div > div p {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* ----- footer (already responsive via bootstrap, but small tweaks) ----- */
+footer .footer-link {
+  text-decoration: none;
+  color:blue;
+  transition: color 0.15s;
+  font-size: 0.9rem;
+}
+
+footer .footer-link:hover {
+  color: red;
+}
+.bi{
+  color: #0d6efd;
+}
+footer .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.75);
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+
+footer .social-icon:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+}
+
+/* ----- utility: smoother transition on all interactive ----- */
+a,
+button,
+.nav-link,
+.btn,
+.row > div {
+  transition: all 0.15s ease;
+}
+
+/* ensure consistent spacing in dense content */
+.row > div > div p:last-child {
+  margin-bottom: 0;
+}
+
+/* style for inline lists within paragraphs (commas, etc.) */
+.row p:has(strong) + p {
+  margin-top: 0.25rem;
+}
+
+/* fix for any stray line breaks */
+br {
+  display: none;
+}
+
+/* improve readability of community details - flex layout for strong tags */
+.row p:has(strong) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.5rem;
+}
+
+.row p strong {
+  flex-shrink: 0;
+}
+
+/* special styling for the central community card */
+.row > div:last-child {
+  border-left: 4px solid #0d6efd;
+}
+
+/* style for the nested paragraph with class text-center */
+.row p.text-center {
+  text-align: left !important;
+  font-style: normal;
+}
+/* ----- responsive fine-tuning for small screens ----- */
+@media (max-width: 576px) {
+  .com {
+    padding: 1.25rem 1rem;
+  }
+   
+  .com h2 {
+    font-size: 1.5rem;
+    padding-left: 0.75rem;
+    border-left-width: 4px;
+  }
+
+  .com p {
+    padding-left: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .row > div > div {
+    padding: 1rem 1rem 1.25rem 1rem;
+  }
+
+  .row h4 {
+    font-size: 1.1rem;
+  }
+
+  .row p {
+    font-size: 0.88rem;
+  }
+
+  .row p strong {
+    min-width: 70px;
+    display: block;
+    margin-bottom: 0.1rem;
+  }
+
+  /* improve readability of dense content on mobile */
+  .row > div > div > p {
+    padding-top: 0.5rem;
+    margin-top: 0.25rem;
+  }
+
+  footer .col-md-4,
+  footer .col-md-2,
+  footer .col-md-3 {
+    margin-bottom: 1.25rem;
+  }
+}
+
+/* medium screens: adjust grid columns */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .row p strong {
+    min-width: 75px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* large screens: keep max-width & breathing */
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .com {
+    padding: 2rem 2.5rem;
+  }
+
+  .row {
+    gap: 2rem;
+  }
+
+  .row > div > div {
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
+  }
+}
+/* additional mobile improvements for readability */
+@media (max-width: 576px) {
+  .row p:has(strong) {
+    flex-direction: column;
+    gap: 0.1rem;
+    padding: 0.35rem 0;
+  }
+
+  .row p strong {
+    min-width: auto;
+  }
+
+  .row > div > div > p {
+    padding-top: 0.35rem;
+    margin-top: 0.25rem;
+  }
+
+  .row h4 + p {
+    font-size: 0.9rem;
+  }
+}
+
+/* tablet landscape improvements */
+@media (min-width: 992px) and (max-width: 1279px) {
+  .row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+/* collapse menu on small screens: extra breathing */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    padding-top: 0.5rem;
+  }
+  .navbar-nav .nav-item {
+    margin-bottom: 0.125rem;
+  }
+  .navbar .btn-outline-primary {
+    margin-top: 0.25rem;
+  }
+}

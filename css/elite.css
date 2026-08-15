@@ -1,0 +1,273 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  background: #fafbfc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1280px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* ----- navbar refinements (mobile first) ----- */
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.navbar .nav-link:hover {
+  background: rgba(13, 110, 253, 0.06);
+  color: #0d6efd;
+}
+
+.navbar .nav-link.active {
+  color: #0d6efd !important;
+  background: rgba(13, 110, 253, 0.08);
+}
+
+
+
+/* ----- elite page heading ----- */
+.elite {
+  margin-bottom: 2rem;
+}
+
+.elite h1 {
+  font-size: calc(1.8rem + 1.2vw);
+  font-weight: 700;
+  color: #0b2a44;
+  margin-bottom: 0.25rem;
+  border-left: 6px solid #0d6efd;
+  padding-left: 1rem;
+}
+
+.elite h2 {
+  font-size: calc(1rem + 0.4vw);
+  font-weight: 400;
+  color: #475569;
+  margin-top: 0.25rem;
+  padding-left: 1rem;
+}
+
+/* ----- profiles grid (responsive card layout) ----- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.grid > div {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grid > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+.grid > div > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+/* ----- utility: smoother transition on all interactive ----- */
+a,
+button,
+.nav-link,
+.btn,
+.grid > div {
+  transition: all 0.15s ease;
+}
+
+/* ensure images don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+.grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  background: #e9edf2;
+}
+
+.grid > div > div > div {
+  padding: 1.25rem 1rem 1.5rem 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid h5 {
+  font-weight: 700;
+  color: #0b2a44;
+  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+}
+
+.grid p {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+.grid p strong {
+  color: #0b2a44;
+  font-weight: 600;
+}
+
+.grid p:last-of-type {
+  color: #64748b;
+  font-style: italic;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid #f0f2f5;
+}
+
+/* ----- footer (already responsive via bootstrap, but small tweaks) ----- */
+footer .footer-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.15s;
+  font-size: 0.9rem;
+}
+
+footer .footer-link:hover {
+  color: white;
+}
+
+footer .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.75);
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+
+footer .social-icon:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+}
+
+/* ----- responsive fine-tuning for small screens ----- */
+@media (max-width: 576px) {
+  .elite h1 {
+    font-size: 1.8rem;
+    padding-left: 0.75rem;
+    border-left-width: 4px;
+  }
+  /* collapse menu on small screens: extra breathing */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    padding-top: 0.5rem;
+  }
+  .navbar-nav .nav-item {
+    margin-bottom: 0.125rem;
+  }
+  .navbar .btn-outline-primary {
+    margin-top: 0.25rem;
+  }
+}
+  .elite h2 {
+    font-size: 1rem;
+    padding-left: 0.75rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .grid img {
+    height: 180px;
+  }
+
+  .grid > div > div > div {
+    padding: 1rem 0.875rem 1.25rem 0.875rem;
+  }
+
+  .grid h5 {
+    font-size: 1rem;
+  }
+
+  .grid p {
+    font-size: 0.85rem;
+  }
+
+  footer .col-md-4,
+  footer .col-md-2,
+  footer .col-md-3 {
+    margin-bottom: 1.25rem;
+  }
+}
+
+/* medium screens: adjust grid columns */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .grid img {
+    height: 180px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .grid img {
+    height: 200px;
+  }
+}
+
+/* large screens: keep max-width & breathing */
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .grid {
+    gap: 2rem;
+  }
+
+  .grid img {
+    height: 250px;
+  }
+
+  .grid > div > div > div {
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
+  }
+}
+
