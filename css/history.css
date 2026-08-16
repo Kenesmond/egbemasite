@@ -40,18 +40,7 @@ body {
   background: rgba(13, 110, 253, 0.08);
 }
 
-/* collapse menu on small screens: extra breathing */
-@media (max-width: 991.98px) {
-  .navbar-nav {
-    padding-top: 0.5rem;
-  }
-  .navbar-nav .nav-item {
-    margin-bottom: 0.125rem;
-  }
-  .navbar .btn-outline-primary {
-    margin-top: 0.25rem;
-  }
-}
+
 
 /* ----- page sections (common styling) ----- */
 .about,
@@ -93,7 +82,7 @@ body {
 .about h1 {
   font-size: calc(1.8rem + 1.2vw);
   font-weight: 700;
-  color: #0b2a44;
+  color: blue;
   margin-bottom: 0.5rem;
   border-left: 6px solid #0d6efd;
   padding-left: 1rem;
@@ -102,7 +91,8 @@ body {
 .about h4 {
   font-size: calc(1rem + 0.3vw);
   font-weight: 400;
-  color: #475569;
+  text-align: center;
+  color: purple;
   margin-bottom: 1rem;
   padding-left: 1rem;
 }
@@ -326,7 +316,23 @@ footer .social-icon:hover {
   background: rgba(255, 255, 255, 0.18);
   color: white;
 }
+/* ----- utility: smoother transition on all interactive ----- */
+a,
+button,
+.nav-link,
+.btn {
+  transition: all 0.15s ease;
+}
 
+/* remove extra line breaks from content */
+br {
+  display: none;
+}
+
+/* improve list readability */
+ul li:last-child {
+  margin-bottom: 0;
+}
 /* ----- responsive fine-tuning for small screens ----- */
 @media (max-width: 576px) {
   .about h1 {
@@ -430,21 +436,16 @@ footer .social-icon:hover {
     padding: 2rem 2.5rem;
   }
 }
-
-/* ----- utility: smoother transition on all interactive ----- */
-a,
-button,
-.nav-link,
-.btn {
-  transition: all 0.15s ease;
+/* collapse menu on small screens: extra breathing */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    padding-top: 0.5rem;
+  }
+  .navbar-nav .nav-item {
+    margin-bottom: 0.125rem;
+  }
+  .navbar .btn-outline-primary {
+    margin-top: 0.25rem;
+  }
 }
 
-/* remove extra line breaks from content */
-br {
-  display: none;
-}
-
-/* improve list readability */
-ul li:last-child {
-  margin-bottom: 0;
-}

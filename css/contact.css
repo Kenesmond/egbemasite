@@ -47,7 +47,7 @@ body {
 h1 {
   font-size: calc(1.8rem + 1.2vw);
   font-weight: 700;
-  color: #0b2a44;
+  color: green;
   margin-bottom: 1.5rem;
   border-left: 6px solid #0d6efd;
   padding-left: 1rem;
