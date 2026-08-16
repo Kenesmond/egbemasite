@@ -14,120 +14,74 @@
 </head>
 <body>
 
-    <div class="container -fluid p-0">
+<div class="container-fluid p-0">
 
-            <nav class="navbar bg-dark navbar-expand-lg navbar-dark">
-                    <div class="container-fluid">
-                    <!-- Brand / Logo -->
-                    <a class="navbar-brand" href="index.html">
-                    <i class="bi bi"></i>ALINSO
-                    </a>
-
-                    <!-- Toggler for mobile -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" 
-                            aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <!-- Collapsible content -->
-                    <div class="collapse navbar-collapse" id="navbarMain">
-                    <!-- Left side nav links -->
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="history.html">History & Origin</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="community.html">Communities</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="culture.html">Culture</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="elite.html">Egbema Elites</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                        <!-- Dropdown example -->
-                        <li class="nav-item dropdown">
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar bg-dark navbar-expand-lg navbar-dark">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-droplet"></i>ALINSO
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" 
+                    aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="history.html">History & Origin</a></li>
+                    <li class="nav-item"><a class="nav-link" href="community.html">Communities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="culture.html">Culture</a></li>
+                    <li class="nav-item"><a class="nav-link" href="elite.html">Egbema Elites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            More
-                        </a>
+                           data-bs-toggle="dropdown" aria-expanded="false">More</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Something else</a></li>
                         </ul>
-                        </li>
-                        <!-- Disabled link (example) -->
-                        <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                        </li>
-                    </ul>
-
-                    <!-- Right side: search form & login button (optional) -->
-                    <form class="d-flex" role="search">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-primary" type="submit">Search</button>
-                    </form>
-                    <button class="btn btn-primary" type="button">
-                        <i class="bi-bi"></i>Login
-                    </button>
-                    </div>
-                </div>
-            </nav>
-            
-        <!-- ===== HERO ===== -->
-        <div class="hero bg-primary text-light text-center py-5">
-              <div class="to col-g-1">
-                <h2>WELCOME TO</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-md-10 col-sm-12">
-                    <h1>Egbema Oil Kingdom</h1>
-                    <p class="sub">Where black gold meets the green earth — <br>Oil &amp; Gas innovation rooted in ancestral farming traditions.</p>
-                    <div class="cut">
-                        <span class="badge bg-light text-dark px-4 py-2 rounded-pill"><i class="bi bi-fuel-pump me-1"></i> 40+ Oil Wells</span>
-                        <span class="badge bg-light text-dark px-4 py-2 rounded-pill"><i class="bi bi-tree me-1"></i> 16 Farming Communities</span>
-                    </div>
-                </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1">Disabled</a></li>
+                </ul>
+                <form class="d-flex me-2" role="search">
+                    <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search" style="max-width:160px;">>
+                    <button class="btn btn-outline-primary" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <button class="btn btn-primary" type="button"><i class="bi bi-box-arrow-in-right me-1"></i>Login</button>
             </div>
         </div>
+    </nav>
 
-        <!-- ===== STATS ===== -->
-        <div class="stats-row text-center py-4">
-            <div class="col ">
-                <div class="stat-number">40+</div>
-                <div class="stat-label">Active Oil Wells</div>
-            </div>
-            <div class="col">
-                <div class="stat-number">16</div>
-                <div class="stat-label">Communities</div>
-            </div>
-            <div class="col">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Farmers</div>
-            </div>
-            <div class="col">
-                <div class="stat-number">1956</div>
-                <div class="stat-label">Oil Discovery</div>
-            </div>
+    <!-- ===== HERO ===== -->
+    <div class="hero">
+        <h2>WELCOME TO</h2>
+        <h1>Egbema Oil Kingdom</h1>
+        <p class="sub">Where black gold meets the green earth — <br>Oil &amp; Gas innovation rooted in ancestral farming traditions.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+            <span class="badge bg-light px-4 py-2 rounded-pill"><i class="bi bi-fuel-pump me-1"></i> 40+ Oil Wells</span>
+            <span class="badge bg-light px-4 py-2 rounded-pill"><i class="bi bi-tree me-1"></i> 16 Farming Communities</span>
         </div>
+    </div>
 
-        <!-- ===== OIL EQUIPMENT SECTION ===== -->
+    <!-- ===== STATS ===== -->
+    <div class="stats-row text-center">
+        <div class="col"><div class="stat-number">40+</div><div class="stat-label">Active Oil Wells</div></div>
+        <div class="col"><div class="stat-number">16</div><div class="stat-label">Communities</div></div>
+        <div class="col"><div class="stat-number">500+</div><div class="stat-label">Farmers</div></div>
+        <div class="col"><div class="stat-number">1956</div><div class="stat-label">Oil Discovery</div></div>
+    </div>
+
+    <!-- ===== OIL EQUIPMENT ===== -->
+    <div class="container">
         <h3 class="section-title"><i class="bi bi-gear-wide-connected"></i> Oil &amp; Gas Equipment</h3>
         <div class="rows">
             <div class="col">
                 <div class="equipment-card">
-                    <div class="icon"></div>
+                    <div class="icon"><i class="bi bi-cpu"></i></div>
                     <h5>Drilling Rig</h5>
                     <p>State-of-the-art onshore rigs for exploration and production in the Niger Delta.</p>
                     <span class="badge">Active</span>
@@ -135,7 +89,7 @@
             </div>
             <div class="col">
                 <div class="equipment-card">
-                    <div class="icon"></div>
+                    <div class="icon"><i class="bi bi-arrow-up-circle"></i></div>
                     <h5>Pumping Unit</h5>
                     <p>High-efficiency beam pumps and ESPs for continuous crude extraction.</p>
                     <span class="badge">12 units</span>
@@ -143,7 +97,7 @@
             </div>
             <div class="col">
                 <div class="equipment-card">
-                    <div class="icon"></div>
+                    <div class="icon"><i class="bi bi-diagram-3"></i></div>
                     <h5>Pipeline Network</h5>
                     <p>Over 80 km of pipelines transporting oil to refineries and export terminals.</p>
                     <span class="badge">Routine</span>
@@ -151,7 +105,7 @@
             </div>
             <div class="col">
                 <div class="equipment-card">
-                    <div class="icon"></div>
+                    <div class="icon"><i class="bi bi-water"></i></div>
                     <h5>Separator Vessel</h5>
                     <p>Three-phase separators for oil, gas, and water treatment at flow stations.</p>
                     <span class="badge">5 stations</span>
@@ -159,12 +113,12 @@
             </div>
         </div>
 
-        <!-- ===== FARMING TOOLS SECTION ===== -->
-        <h3 class="section-title"> Traditional Farming Tools</h3>
+        <!-- ===== FARMING TOOLS ===== -->
+        <h3 class="section-title farming-title"><i class="bi bi-seedling"></i> Traditional Farming Tools</h3>
         <div class="row">
             <div class="col">
                 <div class="farming-card">
-                    <div class="icon"></div>
+                    <div class="icon"><i class="bi bi-tools"></i></div>
                     <h5>Hand Hoe</h5>
                     <p>Essential for tilling, weeding, and planting — the backbone of Egbema agriculture.</p>
                     <span class="badge">Staple</span>
@@ -172,7 +126,7 @@
             </div>
             <div class="col">
                 <div class="farming-card">
-                    <div class="icon"></div>
+                    <div class="icon"><i class="bi bi-droplet"></i></div>
                     <h5>Palm Oil Press</h5>
                     <p>Manual screw press for extracting red palm oil from palm fruits.</p>
                     <span class="badge">Harvest</span>
@@ -180,7 +134,7 @@
             </div>
             <div class="col">
                 <div class="farming-card">
-                    <div class="icon"></div>
+                    <div class="icon"><i class="bi bi-boat"></i></div>
                     <h5>Irrigation Canoe</h5>
                     <p>Hand-carved wooden canoe used for transporting water and produce along rivers.</p>
                     <span class="badge">Riverine</span>
@@ -188,7 +142,7 @@
             </div>
             <div class="col">
                 <div class="farming-card">
-                    <div class="icon"></div>
+                    <div class="icon"><i class="bi bi-basket"></i></div>
                     <h5>Harvest Basket</h5>
                     <p>Woven palm-frond baskets for collecting yam, cassava, and vegetables.</p>
                     <span class="badge">Daily</span>
@@ -196,98 +150,92 @@
             </div>
         </div>
 
-        <!-- ===== CULTURAL BRIDGE: OIL + FARMING ===== -->
-        <div class="row">
-            <div class="col">
-                <div class="border">
-                    <h4><i ></i> Where Oil Meets Earth</h4>
-                    <p>
-                        In Egbema, the hum of drilling rigs blends with the rhythm of the hoe. Our people are 
-                        <strong>oil workers</strong> by day and <strong>farmers</strong> by heritage. We believe in 
-                        balancing <span>black gold</span> with 
-                        <span>green growth</span> — 
-                        sustaining both the nation's energy needs and our ancestral food systems.
-                    </p>
-                </div>
+        <!-- ===== CULTURAL BRIDGE ===== -->
+        <div class="bridge-row row align-items-center">
+            <div class="col-lg-8">
+                <h4><i class="bi bi-arrow-left-right"></i> Where Oil Meets Earth</h4>
+                <p>
+                    In Egbema, the hum of drilling rigs blends with the rhythm of the hoe. Our people are 
+                    <strong>oil workers</strong> by day and <strong>farmers</strong> by heritage. We believe in 
+                    balancing <span class="gold">black gold</span> with 
+                    <span class="gold">green growth</span> — 
+                    sustaining both the nation's energy needs and our ancestral food systems.
+                </p>
             </div>
-            <div class="col">
-                <div class="d-flex">
-                    <span></i> 6 Rig Sites</span>
-                    <span></i> 12 Farm Cooperatives</span>
+            <div class="col-lg-4">
+                <div class="d-flex flex-wrap gap-3 justify-content-lg-end">
+                    <span><i class="bi bi-geo-alt"></i> 6 Rig Sites</span>
+                    <span><i class="bi bi-people"></i> 12 Farm Cooperatives</span>
                 </div>
             </div>
         </div>
-
-        <!-- ===== FOOTER ===== -->
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <h5EGBEMA</h5>
-                        <p>Rooted in the Niger Delta, shaped by the flow of Oil and ancestral traditions.</p>
-                      <div class="icons">
-                            <a href="#" class="social-icon me-1"><i class="bi bi-twitter-x"></i></a>
-                            <a href="#" class="social-icon me-1"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="social-icon me-1"><i class="bi bi-github"></i></a>
-                            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
-                       </div>
-                    </div>
-                    <div class="col">
-                        <h6 class="semibold">Quick links</h6>
-                        <ul class="list">
-                            <li><a href="index.html" class="footer-link">Home</a></li>
-                            <li><a href="about.html" class="footer-link">About Us</a></li>
-                            <li><a href="communities.html" class="footer-link">Communities</a></li>
-                            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
-                            <li><a href="elite.html" class="footer-link">Elite Members</a></li>
-                            <li><a href="culture.html" class="footer-link">Culture</a></li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h6 class="semibold">Resources</h6>
-                        <ul class="list">
-                            <li><a href="oil-reports.html" class="footer-link">Oil Reports</a></li>
-                            <li><a href="farming-guides.html" class="footer-link">Farming Guides</a></li>
-                            <li><a href="support.html" class="footer-link">Support</a></li>
-                            <li><a href="privacy.html" class="footer-link">Privacy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h6 class="semibold">Stay updated</h6>
-                        <p>Subscribe for news on oil and agriculture.</p>
-                        <form>
-                            <div class="input-group">
-                                <input type="email" class="form-control form-control-sm" placeholder="Email">
-                                <button class="btn btn-warning btn-sm" type="button">Subscribe</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="reserve">
-                        &copy; <span id="currentYear"></span> Egbema Oil Kingdom. All rights reserved.
-                    </div>
-                    <div class="secure">
-                        <i></i> Secure &amp; reliable
-                    </div>
-                </div>
-                <p class="ken">
-                    <i class="bi bi-person"></i> Developed by: Engr. Kenneth Iyke Amadi, <br>+234 7038716096
-                </p>
-            </div>
-        </footer>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../javascript/index.js"></script>
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <h5><i class="bi bi-droplet"></i>EGBEMA</h5>
+                    <p class="small">Rooted in the Niger Delta, shaped by the flow of Oil and ancestral traditions.</p>
+                    <div>
+                        <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold">Quick links</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="communities.html">Communities</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="elite.html">Elite Members</a></li>
+                        <li><a href="culture.html">Culture</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold">Resources</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="oil-reports.html">Oil Reports</a></li>
+                        <li><a href="farming-guides.html">Farming Guides</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold">Stay updated</h6>
+                    <p class="small">Subscribe for news on oil and agriculture.</p>
+                    <form>
+                        <div class="input-group input-group-sm">
+                            <input type="email" class="form-control" placeholder="Email">
+                            <button class="btn btn-warning btn-sm" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row align-items-center reserve">
+                <div class="col-md-8">
+                    &copy; <span id="currentYear"></span> Egbema Oil Kingdom. All rights reserved.
+                </div>
+                <div class="col-md-4 text-md-end secure">
+                    <i class="bi bi-shield-check"></i> Secure &amp; reliable
+                </div>
+            </div>
+            <p class="ken">
+                <i class="bi bi-person"></i> Developed by: Engr. Kenneth Iyke Amadi, <br>+234 7038716096
+            </p>
+        </div>
+    </footer>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
-
-
-
-
-
 
 
 
