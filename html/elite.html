@@ -206,6 +206,85 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../javascript/elite.js"></script>
+<script>
+    (function() {
+        // 1) auto-update footer year
+        const yearSpan = document.getElementById('currentYear');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+
+        // 2) additional interactive effect: log a message + add subtle hover class via js (optional)
+        console.log('✅ Egbema Elites page loaded (inline JS active)');
+
+        // 3) optional: add a "click to view profile" alert (just for demo, not intrusive)
+        const cards = document.querySelectorAll('.profile-card');
+        cards.forEach((card, index) => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', function(e) {
+                // prevent if clicking on a link inside card
+                if (e.target.closest('a')) return;
+                const name = this.querySelector('h5')?.innerText || 'Elite';
+                // subtle feedback – you can replace with modal later
+                // uncomment below if you want a toast-like alert:
+                // alert(`📌 ${name} – Egbema elite profile`);
+            });
+        });
+
+        // 4) search button (simple demo)
+        const searchBtn = document.querySelector('form[role="search"] .btn');
+        if (searchBtn) {
+            searchBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const input = this.closest('form').querySelector('input[type="search"]');
+                if (input && input.value.trim() !== '') {
+                    alert(`🔍 Searching for: "${input.value.trim()}" (demo)`);
+                } else {
+                    alert('🔎 Please enter a name or keyword.');
+                }
+            });
+        }
+
+        // 5) "Subscribe" button in footer – demo
+        const subscribeBtn = document.querySelector('footer .input-group .btn');
+        if (subscribeBtn) {
+            subscribeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const emailInput = this.closest('.input-group').querySelector('input[type="email"]');
+                if (emailInput && emailInput.value.trim() !== '') {
+                    alert(`📧 Subscribed with: ${emailInput.value.trim()} (demo)`);
+                    emailInput.value = '';
+                } else {
+                    alert('📧 Please enter a valid email address.');
+                }
+            });
+        }
+
+        // 6) login button demo
+        const loginBtn = document.querySelector('.btn-primary[type="button"] .bi-person-circle')?.closest('.btn');
+        if (loginBtn) {
+            loginBtn.addEventListener('click', function() {
+                alert('🔐 Login dialog (demo) – you can integrate a real modal here.');
+            });
+        }
+
+        // 7) more dropdown items – dummy
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert(`📁 Navigate to: ${this.innerText} (demo)`);
+            });
+        });
+
+        // 8) disabled link – prevent click
+        document.querySelector('.nav-link.disabled')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('⛔ This link is disabled (demo)');
+        });
+
+        console.log('✨ All inline JS handlers are active.');
+    })();
+</script>
 </body>
 </html>
 
