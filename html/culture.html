@@ -178,6 +178,101 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../javascript/culture.js"></script>
+  <script>
+    (function() {
+        "use strict";
+
+        // 1) auto-update footer year
+        const yearSpan = document.getElementById('currentYear');
+        if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+        // 2) video player – log ready event
+        const video = document.querySelector('.video-wrapper video');
+        if (video) {
+            video.addEventListener('loadedmetadata', function() {
+                console.log('🎥 Cultural video loaded: ' + this.duration + 's');
+            });
+            // pause/play feedback (optional)
+            video.addEventListener('play', function() {
+                console.log('▶️ Video playing');
+            });
+        }
+
+        // 3) search button (navbar)
+        const searchBtn = document.querySelector('form[role="search"] .btn');
+        if (searchBtn) {
+            searchBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const input = this.closest('form').querySelector('input[type="search"]');
+                if (input && input.value.trim() !== '') {
+                    alert('🔍 Searching for: "' + input.value.trim() + '" (demo)');
+                } else {
+                    alert('🔎 Please enter a search term.');
+                }
+            });
+        }
+
+        // 4) login button demo
+        const loginBtn = document.querySelector('.btn-primary[type="button"] .bi-person-circle')?.closest('.btn');
+        if (loginBtn) {
+            loginBtn.addEventListener('click', function() {
+                alert('🔐 Login dialog (demo) – you can add a modal.');
+            });
+        }
+
+        // 5) dropdown items – demo
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('📁 Navigate to: ' + this.innerText + ' (demo)');
+            });
+        });
+
+        // 6) disabled link
+        document.querySelector('.nav-link.disabled')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('⛔ This link is disabled (demo)');
+        });
+
+        // 7) footer newsletter subscribe (demo)
+        const footerSubBtn = document.getElementById('footerSubBtn');
+        const footerInput = document.getElementById('footerNewsInput');
+        if (footerSubBtn && footerInput) {
+            footerSubBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const val = footerInput.value.trim();
+                if (!val || !val.includes('@')) {
+                    alert('📧 Please enter a valid email address.');
+                    return;
+                }
+                alert('📬 Footer subscription successful: ' + val);
+                footerInput.value = '';
+            });
+        }
+
+        // 8) social icons (footer) – demo
+        document.querySelectorAll('.social-icon').forEach(icon => {
+            icon.addEventListener('click', function(e) {
+                e.preventDefault();
+                const label = this.querySelector('i')?.className || 'social';
+                alert('🌐 Follow us on ' + label + ' (demo)');
+            });
+        });
+
+        // 9) culture card image click – subtle effect
+        document.querySelectorAll('.culture-card img').forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', function() {
+                const alt = this.getAttribute('alt') || 'culture image';
+                alert('🖼️ ' + alt + ' (enlarged view demo)');
+            });
+        });
+
+        // 10) "More" dropdown placeholder – already handled above.
+
+        console.log('✅ Culture page inline JS active.');
+    })();
+ </script>
 </body>
 </html>
 
